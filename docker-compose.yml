@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+ forecast-api-service:
+  image: tuurhuls/api-projecthosting:latest
+  ports:
+    - "8000:8000"
+  volumes:
+    - sqlite_forecast_volume:/code/sqlitedb
+
+volumes:
+  sqlite_forecast_volume:
